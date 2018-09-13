@@ -12,7 +12,7 @@ class Labels extends JFrame implements ActionListener{
 
     JTextField text=new JTextField();
 
-    JButton btn=new JButton("НАЖМИ");
+    JButton btn=new JButton();
 
 
     Color customcolor=new Color(255,0,0);
@@ -23,26 +23,28 @@ class Labels extends JFrame implements ActionListener{
     //JLabel lbl2=new JLabel("Это верхний текст","Это нижний текст",JLabel.CENTER);
 
     public void dataWrite(){
-        String textarea=text.getText();
 
-        try{
 
-            FileWriter file=new FileWriter("E:\\data\\data.txt",true);
-            BufferedWriter buffer=new BufferedWriter(file);
-            buffer.write("\n " + textarea);
-            buffer.close();
-        }
-        catch(IOException e){
-            System.out.println("Произошла ошибка записи.");
 
-        }
 
     }
 
     public void actionPerformed(ActionEvent event){
+        String textarea=text.getText();
         text.setText(event.getActionCommand());
         if(event.getSource()==btn){
-            dataWrite();
+            try{
+
+                FileWriter file=new FileWriter("E:\\data\\data.txt",true);
+                BufferedWriter buffer=new BufferedWriter(file);
+                buffer.write("\n " + textarea);
+                buffer.close();
+            }
+            catch(IOException e){
+                System.out.println("Произошла ошибка записи.");
+
+            }
+
         }
     }
 
