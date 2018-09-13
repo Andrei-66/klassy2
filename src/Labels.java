@@ -10,9 +10,9 @@ class Labels extends JFrame implements ActionListener{
 
     JLabel lbl=new JLabel("Это верхний текст");
 
-    JTextField text=new JTextField("Текст по умолчанию");
+    JTextField text=new JTextField();
 
-    JButton btn=new JButton("Нажми меня");
+    JButton btn=new JButton("НАЖМИ");
 
 
     Color customcolor=new Color(255,0,0);
@@ -23,11 +23,13 @@ class Labels extends JFrame implements ActionListener{
     //JLabel lbl2=new JLabel("Это верхний текст","Это нижний текст",JLabel.CENTER);
 
     public void dataWrite(){
+        String textarea=text.getText();
 
         try{
+
             FileWriter file=new FileWriter("E:\\data\\data.txt",true);
             BufferedWriter buffer=new BufferedWriter(file);
-            buffer.write("\n"+"eto stroka");
+            buffer.write("\n " + textarea);
             buffer.close();
         }
         catch(IOException e){
