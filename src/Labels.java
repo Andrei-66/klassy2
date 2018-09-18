@@ -13,12 +13,17 @@ class Labels extends JFrame implements ActionListener{
 
     JLabel lbl=new JLabel("Это верхний текст");
 
+
     ArrayList<String> list=new ArrayList<String>();
-    String[] text1;
-    JLabel lbl1=new JLabel(text1);
+    String text1=new String("Это статический текст ");
+    JLabel lbl1=new JLabel();
     JTextField text=new JTextField();//Текстовое поле
+
     JButton btn=new JButton();
     JButton btn1=new JButton();
+
+
+
 
 
     Color customcolor=new Color(255,0,0);
@@ -27,13 +32,12 @@ class Labels extends JFrame implements ActionListener{
 
 
 
-    public void dataWrite(){
 
-    }
 
     public void actionPerformed(ActionEvent event){
         String textarea=text.getText();//Переменная в которую читается введенный текст
         text.setText(event.getActionCommand());
+
         if(event.getSource()==btn){
             try{
 
@@ -58,20 +62,16 @@ class Labels extends JFrame implements ActionListener{
 
                 while ((line=buffer1.readLine())!=null){
                     list.add(line);
-                   for(int i=0;i<list.size();i++){
-                       System.out.println(list.get(i));
-                       text1=list;
+                    list.toString();
 
-                   }
 
                 }
-
             }
+
             catch (IOException e){
                 System.out.println("Произошла ошибка чтения.");
             }
         }
-
 
     }
 
@@ -85,8 +85,10 @@ class Labels extends JFrame implements ActionListener{
         lbl.setForeground(Color.WHITE);
         lbl1.setBackground(Color.WHITE);
         lbl1.setForeground(Color.BLACK);
+
         lbl.setFont(customFont);
         lbl1.setFont(customFont);
+
         btn.addActionListener(this);
         btn1.addActionListener(this);
 
@@ -113,9 +115,6 @@ class Labels extends JFrame implements ActionListener{
         grid.add(lbl1);
 
         contantPane.add(grid);
-
-
-
 
         setVisible(true);
 
