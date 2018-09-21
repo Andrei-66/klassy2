@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.ArrayList.*;
+
 
 class Labels extends JFrame implements ActionListener{
     Container contantPane=getContentPane();
@@ -32,8 +32,6 @@ class Labels extends JFrame implements ActionListener{
 
 
 
-
-
     public void actionPerformed(ActionEvent event){
         String textarea=text.getText();//Переменная в которую читается введенный текст
         text.setText(event.getActionCommand());
@@ -48,10 +46,7 @@ class Labels extends JFrame implements ActionListener{
             }
             catch(IOException e){
                 System.out.println("Произошла ошибка записи.");
-
-
             }
-
         }
         if(event.getSource()==btn1){
             try{
@@ -63,7 +58,6 @@ class Labels extends JFrame implements ActionListener{
                 while ((line=buffer1.readLine())!=null){
                     list.add(line);
                     list.toString();
-
 
                 }
             }
