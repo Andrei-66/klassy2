@@ -67,7 +67,7 @@ class demoText extends JFrame implements ActionListener {
 
     demoText() {
 
-        super("Окно Swing");
+        super("Cтарое окно Swing");
         setSize(500, 500);
         pnl.setLayout(null);
 
