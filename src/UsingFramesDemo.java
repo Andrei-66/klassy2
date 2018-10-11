@@ -196,11 +196,12 @@ class MessageFrame implements ActionListener{
     }
 
 
-}
+
 
 
 public class UsingFramesDemo {
-    public static void main(String[] args) {
+    public  void main(String[] args) {
+
         TextInputFrame.show("Как Вас зовут? Введите Ваше имя : ");
     }
 
