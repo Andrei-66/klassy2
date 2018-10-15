@@ -87,8 +87,10 @@ class IntInputFrame implements ActionListener,KeyListener {
         frame.setBounds(400, 300, width, height);
         //Отключение менеджера компоровки
         frame.setLayout(null);
+
         enter = new JLabel(msg, JLabel.LEFT);
         enter.setBounds(10, 10, width - 20, height / 6);
+
         tf = new JTextField(frame.getWidth() - 20);
         tf.setBounds(10, enter.getHeight() + 5, enter.getWidth(), height / 6);
         //Регистрация обработчика в текстовом поле
@@ -116,7 +118,7 @@ class IntInputFrame implements ActionListener,KeyListener {
     }
 
     //оБРАБОТКА события отпускания кнопки
-    public void keyReliased(KeyEvent ke){
+    public void keyReleased(KeyEvent ke){
 
         try {
             //Попытка преобразовать текст в число
@@ -205,11 +207,8 @@ class MessageFrame implements ActionListener {
 }
 
 
-
-
-
 public class UsingFramesDemo {
-    public  void main(String[] args) {
+    public  static void main(String[] args) {
 
         TextInputFrame.show("Как Вас зовут? Введите Ваше имя : ");
     }
