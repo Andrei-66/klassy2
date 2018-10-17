@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-//Класс для кнопки
+/*Класс для кнопки
 class MyButton extends JButton{
     //Ccылка на окно в которое добавляется кнопка
     private MyFrame frame;
@@ -73,3 +73,4 @@ class MyIconLabel extends JLabel{
 public class MakeComponentsDemo {
 }
 
+*/
