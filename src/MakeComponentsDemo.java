@@ -143,6 +143,36 @@ class MyMenuBar extends JMenuBar{
         //Добавление панели в окно
         frame.add(this);
 
+        //Специальная панель
+        class MyPanel extends JPanel{
+            //Ссылки на метки с текстом указывающим направление перемещения
+            public JLabel HLab;//По горизонтали
+            public JLabel VLab;//По вертикали
+
+            //Контструктор класса
+            MyPanel(){
+                //Вызов конструктора сyперкласса
+                super();
+                //Создание тектсовых меток
+                JLabel L1=new JLabel("По горизонтали");
+                JLabel L2=new JLabel("По вертикали");
+
+                HLab=new JLabel("на месте");
+                VLab=new JLabel("на месте");
+
+                //Подключается менеджер компоновки, панель разбивается на четыре стобца и две строки
+                setLayout(new CridLayout(2,2,3,3));
+                add(L1);
+                add(HLab);
+                add(L2);
+                add(VLab);
+
+
+
+            }
+
+        }
+
 
 
 
